@@ -1,6 +1,8 @@
 
 class Heap:
     def __init__(self, size):
+        if not isinstance(size, int):
+            raise TypeError(f'The value must be type of int received {type(val)}')
         self._heap = [None] * (size + 1)
         self._maxSize = size
         self._size = 1
