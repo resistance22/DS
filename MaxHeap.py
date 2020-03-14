@@ -33,10 +33,7 @@ class MaxHeap:
                         self._heap[i], self._heap[2*i+1] = self._heap[2*i+1], self._heap[i]
                         i = 2*i + 1
                     else:
-                        print(f'2:{self._heap}')
                         self._heap[i], self._heap[2*i] = self._heap[2*i], self._heap[i]
-                        print(f'2:{self._heap}')
-
                         i = 2*i
 
     def size(self):
@@ -44,21 +41,3 @@ class MaxHeap:
 
     def __str__(self):
         return str(self._heap[1:])
-
-
-
-def main():
-    h1 = MaxHeap(10)
-    h1.insert(6)
-    h1.insert(7)
-    h1.insert(3)
-    h1.insert(1)
-    h1.insert(8)
-    h1.insert(2)
-    h1.insert(9)
-    h1.insert(6)
-    h1.delete()
-    print(h1)
-
-if __name__ == "__main__":
-    main()
